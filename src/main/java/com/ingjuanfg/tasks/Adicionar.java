@@ -1,14 +1,14 @@
-package com.ingjuanfg.interactions;
+package com.ingjuanfg.tasks;
 
-import com.ingjuanfg.tasks.Realizar;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
+import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
 import static com.ingjuanfg.userinterface.ProductPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class Adicionar implements Interaction {
+public class Adicionar implements Task {
 
 
     @Override

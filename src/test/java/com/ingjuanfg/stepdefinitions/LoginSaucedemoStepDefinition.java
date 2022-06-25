@@ -1,8 +1,7 @@
 package com.ingjuanfg.stepdefinitions;
 
-import com.ingjuanfg.interactions.Adicionar;
+import com.ingjuanfg.tasks.Adicionar;
 import com.ingjuanfg.tasks.Autenticacion;
-import com.ingjuanfg.tasks.Realizar;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
