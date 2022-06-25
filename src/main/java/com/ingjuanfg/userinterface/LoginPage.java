@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import static net.serenitybdd.screenplay.targets.Target.the;
 
 public class LoginPage {
+
+
     public static final Target INPUT_USUARIO =
             the("Campo de ingreso de usuario")
                     .located(By.id("user-name"));
