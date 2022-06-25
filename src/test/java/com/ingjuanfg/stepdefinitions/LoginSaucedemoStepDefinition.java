@@ -1,5 +1,7 @@
 package com.ingjuanfg.stepdefinitions;
 
+import com.ingjuanfg.interactions.Adicionar;
+import com.ingjuanfg.tasks.Autenticacion;
 import com.ingjuanfg.tasks.Realizar;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Cuando;
@@ -25,7 +27,12 @@ public class LoginSaucedemoStepDefinition {
 
     @Cuando("el usuario ingrese sus credenciales")
     public void elUsuarioIngreseSusCredenciales() {
-        theActorInTheSpotlight().attemptsTo(Realizar.AutenticacionEnSaucelabs());
+        theActorInTheSpotlight().attemptsTo(Autenticacion.enSaucedemo());
+    }
+
+    @Cuando("seleccione un producto")
+    public void seleccioneUnProducto() {
+        theActorInTheSpotlight().attemptsTo(Adicionar.unProductoAlCarrito());
     }
 
     @Entonces("el usuario deberia ingresar al ecommerce")
