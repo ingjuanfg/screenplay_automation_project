@@ -21,11 +21,12 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'net.serenity-bdd.aggregator'
+//apply plugin: "org.gradle.test-retry" version "1.4.0"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-ext{
+ext {
     serenityVersion = '2.0.70'
     serenityCucumberVersion = '1.0.4'
 }
@@ -51,12 +52,24 @@ dependencies {
     testImplementation 'org.hamcrest:hamcrest-core:1.3'
 }
 
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+gradle.startParameter.continueOnFailure = true
+
+tasks.withType(Test) {
+    systemProperties = System.properties as Map<String, ?>
+    maxParallelForks = Runtime.runtime.availableProcessors()
+}
+
 test {
     systemProperty 'properties', System.getProperty('properties')
 }
 
-tasks.withType(Test) {
-    systemProperties = System.properties
-}
-
-gradle.startParameter.continueOnFailure = true
+//tasks.test {
+//    retry {
+//        maxRetries.set(2)
+//        maxFailures.set(10)
+//        failOnPassedAfterRetry.set(true)
+//    }
+//}
