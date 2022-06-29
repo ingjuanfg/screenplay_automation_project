@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.ingjuanfg.userinterface.CheckoutPage.*;
-import static com.ingjuanfg.userinterface.ProductPage.BOTON_CARRITO;
+import static com.ingjuanfg.userinterface.ProductoPage.BOTON_CARRITO;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Realizar implements Task {

@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
-import static com.ingjuanfg.userinterface.ProductPage.*;
+import static com.ingjuanfg.userinterface.ProductoPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Adicionar implements Task {

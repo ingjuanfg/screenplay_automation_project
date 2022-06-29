@@ -7,7 +7,9 @@ import org.openqa.selenium.By;
 
 import static net.serenitybdd.screenplay.targets.Target.the;
 
-public class ProductPage extends PageObject {
+public class ProductoPage extends PageObject {
+
+    public static final Target LABEL_TITULO_PAGINA = the("Titulo de la Pagina Products").located(By.xpath("//span[contains(.,'Products')]"));
 
     public static final Target BOTON_PRODUCTO_COMPRAR =
             the("Boton para adicionar el producto seleccionado al carrito")
