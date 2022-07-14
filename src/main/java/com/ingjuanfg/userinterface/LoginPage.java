@@ -18,4 +18,11 @@ public class LoginPage extends PageObject {
     public static final Target BOTON_LOGIN =
             the("Boton de inicio de sesión")
                     .located(By.id("login-button"));
+
+    public static final Target MENSAJE_ERROR_LOGIN =
+            the("Boton de inicio de sesión")
+                    .located(By.className("error-button"));
+
+
+
 }

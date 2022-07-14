@@ -1,25 +1,20 @@
 package com.ingjuanfg.tasks;
 
-import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.type.Type;
+import net.serenitybdd.screenplay.Performable;
 
-import static com.ingjuanfg.userinterface.LoginPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class Autenticacion implements Task {
-    @Override
-    public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                Enter.theValue("standard_user").into(INPUT_USUARIO),
-                Type.theValue("secret_sauce").into(INPUT_PASSWORD),
-                Click.on(BOTON_LOGIN)
-        );
+public class Autenticacion {
+
+    public static Performable conUsuarioActivo(){
+        return instrumented(UsuarioActivo.class);
     }
 
-    public static Autenticacion enSaucedemo(){
-        return instrumented(Autenticacion.class);
+    public static Performable conUsuarioBloqueado(){
+        return instrumented(UsuarioBloqueado.class);
+    }
+
+    public static Performable conUsuarioConProblemas(){
+        return instrumented(UsuarioProblemas.class);
     }
 }

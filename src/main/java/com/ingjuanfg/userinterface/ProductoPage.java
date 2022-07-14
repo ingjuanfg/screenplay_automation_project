@@ -18,5 +18,8 @@ public class ProductoPage extends PageObject {
     public static final Target BOTON_CARRITO =
     the("Boton de carrito").located(By.className("shopping_cart_link"));
 
+    public static final Target TITULO_IMAGEN_PROBLEMA = the("Titulo imagen - Problema")
+            .locatedBy("//img[@alt='Sauce Labs Backpack']");
+
 }
 

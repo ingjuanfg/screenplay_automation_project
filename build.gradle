@@ -57,6 +57,7 @@ test {
 
 tasks.withType(Test) {
     systemProperties = System.properties
+    maxParallelForks = Runtime.runtime.availableProcessors()
 }
 
 gradle.startParameter.continueOnFailure = true
